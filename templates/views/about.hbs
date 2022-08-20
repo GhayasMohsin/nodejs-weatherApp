@@ -8,8 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    {{>header}}
-    <p>{{name}} is an employee of the company named as {{company}} as a {{designation}}</p>
-    {{>footer}}
+    <div class="container">
+        <header>
+            {{>header}}
+            <p>{{name}} is an employee of the company named as {{company}} as a {{designation}}</p>
+        </header>
+
+       
+    </div>
+    <footer>
+        {{>footer}}
+    </footer>
+   
 </body>
 </html>

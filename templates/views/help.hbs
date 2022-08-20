@@ -8,8 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    {{>header}}
-    <p>{{statement}}</p>
-    {{>footer}}
+    <div class="container">
+        <header>
+            {{>header}}
+            <p>{{statement}}</p>
+        </header>
+    </div>
+    <footer>
+        {{>footer}}
+    </footer>
 </body>
 </html>
