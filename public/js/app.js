@@ -12,7 +12,8 @@ console.log('The live server is setup');
 
 let fetchhhh = (location, callback) => {
 
-    fetch('/weather?address=' + location)
+    fetch('http://api.weatherstack.com/current?access_key=505f433387e46285358b4f935d293dc3&query=' + location)
+    // fetch('/weather?address=' + location)
         .then(
             (response) => {
                 response.json().then((data) => {
