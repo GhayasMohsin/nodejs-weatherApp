@@ -13,7 +13,6 @@ console.log('The live server is setup');
 let fetchhhh = (location, callback) => {
 
     fetch('/weather?address=' + location)
-    // fetch('/weather?address=' + location)
         .then(
             (response) => {
                 response.json().then((data) => {
