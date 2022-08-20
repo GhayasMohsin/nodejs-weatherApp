@@ -5,7 +5,8 @@ const path = require('path')
 const hbs = require('hbs')
 
 const app = express()
-const port=process.env.PORT||3000
+const port=process.env.PORT || 3000
+console.log(process.env.PORT)
 
 //configuring paths
 // console.log(path.join(__dirname,'./public/index.html'))
