@@ -56,18 +56,15 @@ app.get('/weather', (req, res) => {
             if (error) {
                 return res.send({error})
             }
-            else{
-                res.send({latitude,longitude,location})
-            }
-            // forecast(latitude, longitude, (error, data) => {
-            //     if (error === undefined) {
-            //         res.send({
-            //             address: req.query.address,
-            //             location,
-            //             forecast: data
-            //         })
-            //     } else { console.log('Error', error) }
-            // })
+            forecast(latitude, longitude, (error, data) => {
+                if (error === undefined) {
+                    res.send({
+                        address: req.query.address,
+                        location,
+                        forecast: data
+                    })
+                } else { console.log('Error', error) }
+            })
         })
     }
 })
