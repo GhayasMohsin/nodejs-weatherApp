@@ -5,6 +5,7 @@ const path = require('path')
 const hbs = require('hbs')
 
 const app = express()
+const port=process.env.PORT||3000
 
 //configuring paths
 // console.log(path.join(__dirname,'./public/index.html'))
@@ -74,8 +75,8 @@ app.get('*', (req, res) => {
     res.render('404', { title: '404', message: 'Page not found' })
 })
 
-app.listen(3000, () => {
-    console.log('Server is started')
+app.listen(port, () => {
+    console.log('Server is started on port: '+port)
 })
 
 
